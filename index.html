@@ -98,6 +98,8 @@
       function getUserProfile() {
         liff.getProfile()
           .then(profile => {
+            const displayName = profile.displayName;
+            document.getElementById('displayName').textContent = `こんにちは！！　${displayName} さん`;
             const userId = profile.userId;
             document.getElementById('userId').textContent = `ユーザーID: ${userId}`;
           })
